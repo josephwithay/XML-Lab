@@ -8,7 +8,7 @@ Structured for days, timeslots, and courses
 <!ELEMENT timetable (days|timeslots|courses)>
 
 <!-- Days element contains days of the week -->
-<!ELEMENT days (day)*>
+<!ELEMENT days (day)>
 
 <!-- Timeslots element contains timeslots of the week -->
 <!ELEMENT timeslots (timeslot)>
@@ -17,7 +17,7 @@ Structured for days, timeslots, and courses
 <!ELEMENT courses (course)>
 
 <!-- Day element contains timeslot, course, and booking -->
-<!ELEMENT day (timeslot|course|booking)*>
+<!ELEMENT day (timeslot|course|booking)>
 <!-- Day attributes contains days of the week -->
 <!ATTLIST day
     weekday (MON|TUE|WED|THU|FRI) #REQUIRED
@@ -39,7 +39,7 @@ Structured for days, timeslots, and courses
   >
 
 <!-- Booking element contains room and instructor -->
-<!ELEMENT booking (room|instructor)*>
+<!ELEMENT booking (room|instructor)>
 
 <!-- Room element contains room number -->
 <!ELEMENT room (#PCDATA)>

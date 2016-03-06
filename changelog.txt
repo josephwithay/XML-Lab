@@ -1,7 +1,5 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
-2016-03-06 00:11 - Created and filled in MON and TUE for days.xml and WED for 
-				   timeslots.xml. Redefined minor parts to the DTD.
 2016-03-05 23:39 - Created base for schedule.dtd and created master.xml
 2016-03-03 9:49 - Initial setup
