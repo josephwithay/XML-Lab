@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE timetable SYSTEM "schedule.dtd">
+
+<!ENTITY days SYSTEM "data/days.xml">
+<!ENTITY timeslots SYSTEM "data/timeslots.xml">
+<!ENTITY courses SYSTEM "data/courses.xml">
+
+<timetable>
+    <!-- 3 different faucets-->
+    &days;
+    &timeslots;
+    &courses;
+</timetable>
