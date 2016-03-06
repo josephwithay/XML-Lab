@@ -1,4 +1,5 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
-2016-03-3 9:49 -Initial setup
+2016-03-05 23:39 - Created base for schedule.dtd and created master.xml
+2016-03-03 9:49 - Initial setup
