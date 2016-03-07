@@ -1,6 +1,8 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-06 22:22 - courses.xml is created
+2016-03-06 21:04 - Added type in the course ATTLIST
 2016-03-06 00:11 - Created and filled in MON and TUE for days.xml and WED for 
 				   timeslots.xml. Redefined minor parts to the DTD.
 2016-03-05 23:39 - Created base for schedule.dtd and created master.xml

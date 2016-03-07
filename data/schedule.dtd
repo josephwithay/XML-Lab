@@ -35,7 +35,8 @@ Structured for days, timeslots, and courses
 <!ELEMENT course (booking|timeslot)>
 <!-- Course attribute contains course code -->
 <!ATTLIST course
-    code CDATA #REQUIRED
+	code CDATA #REQUIRED
+	type (Lab|Lec) #REQUIRED
   >
 
 <!-- Booking element contains room and instructor -->
