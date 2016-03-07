@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE timetable SYSTEM "schedule.dtd">
 <!-- 
 Format of timeslots.xml
     <timeslots>
@@ -15,7 +13,7 @@ Format of timeslots.xml
 	</timeslot>
     </timeslots>
 -->
-<timetable>
+
 	<timeslots>
 		<timeslot start="12:30" end="14:20">
 			<day weekday="WED">
@@ -28,4 +26,3 @@ Format of timeslots.xml
 			</day>
 		</timeslot>
 	</timeslots>
-</timetable>

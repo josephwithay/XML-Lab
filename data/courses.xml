@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE timetable SYSTEM "schedule.dtd">
 <!--
 Format of courses.xml
 <course code="" type="">
@@ -13,7 +11,7 @@ Format of courses.xml
 	</timeslot>
 </course>
 -->
-<timetable>
+
 	<courses>
 		<course code="4910" type="Lec">
 			<timeslot start="15:30" end="16:20">
@@ -89,4 +87,3 @@ Format of courses.xml
 			</timeslot>
 		</course>
 	</courses>
-</timetable>
