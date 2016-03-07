@@ -15,7 +15,7 @@
 			<timeslot start="15:30" end="16:20">
 				<course code="4910">
 					<booking>
-						<room>sw9-206</room>
+						<room>sw1-2005</room>
 						<instructor>richard</instructor>
 					</booking>
 				</course>
@@ -41,7 +41,7 @@
 			<timeslot start="12:30" end="13:20">
 				<course code="4650">
 					<booking>
-						<room>sw9-206</room>
+						<room>se6-205</room>
 						<instructor>medhat</instructor>
 					</booking>
 				</course>
@@ -49,7 +49,7 @@
 			<timeslot start="15:30" end="17:20">
 				<course code="4620">
 					<booking>
-						<room>sw3-3615</room>
+						<room>sw1-2020</room>
 						<instructor>bethany</instructor>
 					</booking>
 				</course>
