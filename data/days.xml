@@ -20,15 +20,15 @@ Format of days.xml
 				<course code="4650" type="Lab">
 					<booking>
 						<room>se12-306</room>
-						<instructor>medhat</instructor>
+						<instructor>medhat elmasry</instructor>
 					</booking>
 				</course>
 			</timeslot>
 			<timeslot start="15:30" end="16:20">
 				<course code="4910" type="Lec">
 					<booking>
-						<room>sw9-206</room>
-						<instructor>richard</instructor>
+						<room>sw1-2005</room>
+						<instructor>richard chau</instructor>
 					</booking>
 				</course>
 			</timeslot>
@@ -36,7 +36,7 @@ Format of days.xml
 				<course code="4650" type="Lec">
 					<booking>
 						<room>se6-205</room>
-						<instructor>medhat</instructor>
+						<instructor>medhat elmasry</instructor>
 					</booking>
 				</course>
 			</timeslot>
@@ -46,23 +46,23 @@ Format of days.xml
 				<course code="4620" type="Lab">
 					<booking>
 						<room>se12-306</room>
-						<instructor>bethany</instructor>
+						<instructor>bethany edmonds</instructor>
 					</booking>
 				</course>
 			</timeslot>
 			<timeslot start="12:30" end="13:20">
 				<course code="4650" type="Lec">
 					<booking>
-						<room>sw9-206</room>
-						<instructor>medhat</instructor>
+						<room>se6-205</room>
+						<instructor>medhat elmsary</instructor>
 					</booking>
 				</course>
 			</timeslot>
 			<timeslot start="15:30" end="17:20">
 				<course code="4620" type="Lec">
 					<booking>
-						<room>sw3-3615</room>
-						<instructor>bethany</instructor>
+						<room>sw1-2020</room>
+						<instructor>bethany edmonds</instructor>
 					</booking>
 				</course>
 			</timeslot>
