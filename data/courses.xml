@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE timetable SYSTEM "schedule.dtd">
+<!--
+Format of courses.xml
+<course code="" type="">
+	<timeslot start="" end="">
+		<day weekday="">
+			<booking>
+				<room></room>
+				<instructor></instructor>
+			</booking>
+		</day>
+	</timeslot>
+</course>
+-->
+<timetable>
+	<courses>
+		<course code="4910" type="Lec">
+			<timeslot start="15:30" end="16:20">
+				<day weekday="MON">
+					<booking>
+						<room>sw1-2005</room>
+						<instructor>richard chau</instructor>
+					</booking>
+				</day>
+			</timeslot>
+			<timeslot start="09:30" end="10:20">
+				<day weekday="THU">
+					<booking>
+						<room>sw5-1840</room>
+						<instructor>richard chau</instructor>
+					</booking>
+				</day>
+			</timeslot>
+		</course>
+		
+		<course code="4910" type="Lab">
+			<timeslot start="15:30" end="16:20">
+				<day weekday="THU">
+					<booking>
+						<room>se12-306</room>
+						<instructor>richard chau</instructor>
+					</booking>
+				</day>
+			</timeslot>
+		</course>
+		
+		<course code="4850" type="Lab">
+			<timeslot start="13:30" end="15:20">
+				<day weekday="THU">
+					<booking>
+						<room>se12-308</room>
+						<instructor>james parry</instructor>
+					</booking>
+				</day>
+			</timeslot>
+		</course>
+		
+		<course code="4660" type="Lec">
+			<timeslot start="08:30" end="10:20">
+				<day weekday="FRI">
+					<booking>
+						<room>sw9-206</room>
+						<instructor>steve fabiszewski</instructor>
+					</booking>
+				</day>
+			</timeslot>
+		</course>
+		
+		<course code="4660" type="Lab">
+			<timeslot start="13:30" end="15:20">
+				<day weekday="FRI">
+					<booking>
+						<room>se12-306</room>
+						<instructor>steve fabiszewski</instructor>
+					</booking>
+				</day>
+			</timeslot>
+		</course>
+
+		<course code="4770" type="Lab">
+			<timeslot start="10:30" end="12:20">
+				<day weekday="FRI">
+					<booking>
+						<room>se12-306</room>
+						<instructor>trevor lord</instructor>
+					</booking>
+				</day>
+			</timeslot>
+		</course>
+	</courses>
+</timetable>
