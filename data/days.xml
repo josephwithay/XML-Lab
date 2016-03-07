@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE timetable SYSTEM "schedule.dtd">
+<!--
+Format of days.xml
+    <days>
+        <day weekday="">
+            <timeslot start=" end="">
+                <course code="" type="">
+                    <booking>
+                        <room></room>
+                        <instructor></instructor>
+                    </booking>
+                </course>
+            </timeslot>
+	</day>
+    </days>
+-->
 
-<timetable>
 	<days>
 		<day weekday="MON">
 			<timeslot start="10:30" end="12:20">
-				<course code="4650">
+				<course code="4650" type="Lab">
 					<booking>
 						<room>se12-306</room>
 						<instructor>medhat</instructor>
@@ -13,7 +27,7 @@
 				</course>
 			</timeslot>
 			<timeslot start="15:30" end="16:20">
-				<course code="4910">
+				<course code="4910" type="Lec">
 					<booking>
 						<room>sw9-206</room>
 						<instructor>richard</instructor>
@@ -21,7 +35,7 @@
 				</course>
 			</timeslot>
 			<timeslot start="16:30" end="17:20">
-				<course code="4650">
+				<course code="4650" type="Lec">
 					<booking>
 						<room>se6-205</room>
 						<instructor>medhat</instructor>
@@ -31,7 +45,7 @@
 		</day>
 		<day weekday="TUE">
 			<timeslot start="8:30" end="10:20">
-				<course code="4620">
+				<course code="4620" type="Lab">
 					<booking>
 						<room>se12-306</room>
 						<instructor>bethany</instructor>
@@ -39,7 +53,7 @@
 				</course>
 			</timeslot>
 			<timeslot start="12:30" end="13:20">
-				<course code="4650">
+				<course code="4650" type="Lec">
 					<booking>
 						<room>sw9-206</room>
 						<instructor>medhat</instructor>
@@ -47,7 +61,7 @@
 				</course>
 			</timeslot>
 			<timeslot start="15:30" end="17:20">
-				<course code="4620">
+				<course code="4620" type="Lec">
 					<booking>
 						<room>sw3-3615</room>
 						<instructor>bethany</instructor>
@@ -56,4 +70,3 @@
 			</timeslot>
 		</day>		
 	</days>
-</timetable>

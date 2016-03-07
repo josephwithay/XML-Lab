@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE timetable SYSTEM "schedule.dtd">
-
+<!-- 
+Format of timeslots.xml
+    <timeslots>
+	<timeslot start="" end="">
+            <day weekday="">
+                <course code="" type="">
+                    <booking>
+			<room></room>
+			<instructor></instructor>
+                    </booking>
+		</course>
+            </day>
+	</timeslot>
+    </timeslots>
+-->
 <timetable>
 	<timeslots>
 		<timeslot start="12:30" end="14:20">
 			<day weekday="WED">
-				<course code="4850">
+				<course code="4850" type="Lec">
 					<booking>
 						<room>se6-207</room>
-						<instructor>jim</instructor>
+						<instructor>jim parry</instructor>
 					</booking>
 				</course>
 			</day>
