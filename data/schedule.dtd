@@ -5,7 +5,7 @@ Structured for days, timeslots, and courses
 -->
 
 <!-- Timetable element contains days, timeslots, and courses -->
-<!ELEMENT timetable (days|timeslots|courses)>
+<!ELEMENT timetable (days|timeslots|courses)*>
 
 <!-- Days element contains days of the week -->
 <!ELEMENT days (day)*>
@@ -14,7 +14,7 @@ Structured for days, timeslots, and courses
 <!ELEMENT timeslots (timeslot)>
 
 <!-- Courses element contains courses of the week -->
-<!ELEMENT courses (course)>
+<!ELEMENT courses (course)*>
 
 <!-- Day element contains timeslot, course, and booking -->
 <!ELEMENT day (timeslot|course|booking)*>
@@ -24,7 +24,7 @@ Structured for days, timeslots, and courses
   >
 
 <!-- Timeslot element contains timetable data -->
-<!ELEMENT timeslot (course|day)>
+<!ELEMENT timeslot (course|day)*>
 <!-- Timeslot attributes contains start and end time -->
 <!ATTLIST timeslot
     start CDATA #REQUIRED
@@ -32,7 +32,7 @@ Structured for days, timeslots, and courses
   >
 
 <!-- Course element contains booking or timeslot -->
-<!ELEMENT course (booking|timeslot)>
+<!ELEMENT course (booking|timeslot)*>
 <!-- Course attribute contains course code -->
 <!ATTLIST course
 	code CDATA #REQUIRED
