@@ -1,4 +1,14 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
-2016-03-3 9:49 -Initial setup
+2016-03-07 15:03 - Updated the days.xml to reflect post-readingbreak schedule
+2016-03-07 14:53 - removed timetable tag from the 3 xml views
+                 - adjusted schedule.dtd to use courses properly
+                 - added entity array to master.xml so it uses 3 views
+2016-03-06 22:22 - courses.xml is created and wrote out full name for instructors
+2016-03-06 21:04 - Added type in the course ATTLIST
+2016-03-06 00:11 - Created and filled in MON and TUE for days.xml and WED for 
+				   timeslots.xml. Redefined minor parts to the DTD. 
+                    timeslots.xml. Redefined minor parts to the DTD.
+2016-03-05 23:39 - Created base for schedule.dtd and created master.xml
+2016-03-03 9:49 - Initial setup
