@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-10 13:53 - added location of data folder to constants
 2016-03-07 15:03 - Updated the days.xml to reflect post-readingbreak schedule
 2016-03-07 14:53 - removed timetable tag from the 3 xml views
                  - adjusted schedule.dtd to use courses properly
