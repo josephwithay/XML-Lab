@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<timetable>
+	<days>
+		<day weekday="MON">Monday</day>
+		<day weekday="TUE">Tuesday</day>
+		<day weekday="WED">Wednesday</day>
+		<day weekday="THU">Thursday</day>
+		<day weekday="FRI">Friday</day>
+	</days>
+	<timeslots>
+		<timeslot start="8:30" end="9:20">8:30 AM</timeslot>
+		<timeslot start="9:30" end="10:20">9:30 AM</timeslot>
+		<timeslot start="10:30" end="11:20">10:30 AM</timeslot>
+		<timeslot start="11:30" end="12:20">11:30 AM</timeslot>
+		<timeslot start="12:30" end="1:20">12:30 PM</timeslot>
+		<timeslot start="1:30" end="2:20">1:30 PM</timeslot>
+		<timeslot start="2:30" end="3:20">2:30 PM</timeslot>
+		<timeslot start="3:30" end="4:20">3:30 PM</timeslot>
+		<timeslot start="4:30" end="5:20">4:30 PM</timeslot>
+	</timeslots>
+	<courses>
+		<course code="4620" type="Lec">ACIT4620 Lec</course>
+		<course code="4620" type="Lab">ACIT4620 Lab</course>
+		<course code="4650" type="Lec">ACIT4650 Lec</course>
+		<course code="4650" type="Lab">ACIT4650 Lab</course>
+		<course code="4660" type="Lec">ACIT4660 Lec</course>
+		<course code="4660" type="Lab">ACIT4660 Lab</course>
+		<course code="4770" type="Lec">ACIT4770 Lab</course>
+		<course code="4850" type="Lec">ACIT4850 Lec</course>
+		<course code="4850" type="Lab">ACIT4850 Lab</course>
+		<course code="4910" type="Lec">ACIT4910 Lec</course>
+		<course code="4910" type="Lab">ACIT4910 Lab</course>
+	</courses>
+</timetable>
