@@ -5,42 +5,62 @@ Structured for days, timeslots, and courses
 -->
 
 <!-- Timetable element contains days, timeslots, and courses -->
-<!ELEMENT timetable (days|timeslots|courses)*>
+<!ELEMENT timetable (days|timeslots|courses)+>
+
+<!--************************************************-->
+<!--***********************Day**********************-->
+<!--************************************************-->
 
 <!-- Days element contains days of the week -->
-<!ELEMENT days (day)*>
-
-<!-- Timeslots element contains timeslots of the week -->
-<!ELEMENT timeslots (timeslot)>
-
-<!-- Courses element contains courses of the week -->
-<!ELEMENT courses (course)*>
+<!ELEMENT days (day)+>
 
 <!-- Day element contains timeslot, course, and booking -->
-<!ELEMENT day (timeslot|course|booking)*>
+<!ELEMENT day (booking|EMPTY)*>
+
 <!-- Day attributes contains days of the week -->
-<!ATTLIST day
-    weekday (MON|TUE|WED|THU|FRI) #REQUIRED
-  >
+<!ATTLIST day weekday (MON|TUE|WED|THU|FRI) #REQUIRED>
+
+<!--************************************************-->
+<!--********************Timeslot********************-->
+<!--************************************************-->
+
+<!-- Timeslots element contains timeslots of the week -->
+<!ELEMENT timeslots (timeslot)+>
 
 <!-- Timeslot element contains timetable data -->
-<!ELEMENT timeslot (course|day)*>
+<!ELEMENT timeslot (booking|EMPTY)*>
+
 <!-- Timeslot attributes contains start and end time -->
 <!ATTLIST timeslot
-    start CDATA #REQUIRED
-    end CDATA #REQUIRED
+    start	CDATA	#REQUIRED
+    end		CDATA	#REQUIRED
   >
+
+<!--************************************************-->
+<!--*********************Course*********************-->
+<!--************************************************-->
+
+<!-- Courses element contains courses of the week -->
+<!ELEMENT courses (course)+>
 
 <!-- Course element contains booking or timeslot -->
-<!ELEMENT course (booking|timeslot)*>
+<!ELEMENT course (booking)*>
+
 <!-- Course attribute contains course code -->
-<!ATTLIST course
-	code CDATA #REQUIRED
-	type (Lab|Lec) #REQUIRED
-  >
+<!ATTLIST course courseCode CDATA #REQUIRED>
+
+<!--************************************************-->
+<!--*************Attributes in Booking**************-->
+<!--************************************************-->
+
+<!-- Booking element contains unique timetable information -->
+<!ELEMENT booking (((day, timeslot)|(timeslot, courseCode)|(day, courseCode)), courseType, room, instructor)>
 
 <!-- Booking element contains room and instructor -->
-<!ELEMENT booking (room|instructor)*>
+<!ELEMENT courseCode (#PCDATA)>
+
+<!-- Booking element contains room and instructor -->
+<!ELEMENT courseType (#PCDATA)>
 
 <!-- Room element contains room number -->
 <!ELEMENT room (#PCDATA)>
