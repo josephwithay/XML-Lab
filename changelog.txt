@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-11 14:33 - Updated schedule according to the feedback given
 2016-03-10 14:12 - fixed timetable.xml to have 24HR clock instead of 12HR
 2016-03-10 14:08 - created and filled in the timetable.xml file
 2016-03-10 13:53 - added location of data folder to constants
