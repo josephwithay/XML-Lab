@@ -1,25 +1,27 @@
 <?php
 
-class Booking 
+Class Booking extends CI_Model
 {
-	protected $school_day = '';
-	protected $period = '';
-	protected $course_id = '';
-	protected $period_start = '';
-	protected $period_end = '';
-	protected $room = '';
-	protected $instructor = '';
-	
+
+	public $weekday = "";
+	public $timeslot = "";
+	public $courseCode = "";
+	public $periodStart = "";
+	public $periodEnd = "";
+	public $room = "";
+	public $instructor = "";
+
 	// Constructor
-	public function __construct($detail) {
+	public function __construct($detail)
+	{
 		parent::__construct();
-		
-		$this->school_day = (string) $detail['school_day'];
-		$this->period = (string) $detail['period'];
-		$this->course_id = (string) $detail['course_id'];
-		$this->period_start = (string) $detail['period_start'];
-		$this->period_end = (string) $detail['$period_end'];
+		$this->weekday = (string) $detail['weekday'];
+		$this->timeslot = (string) $detail['timeslot'];
+		$this->courseCode = (string) $detail['courseCode'];
+		$this->periodStart = (string) $detail['periodStart'];
+		$this->periodEnd = (string) $detail['periodEnd'];
 		$this->room = (string) $detail['room'];
 		$this->instructor = (string) $detail['instructor'];
 	}
+
 }
