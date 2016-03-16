@@ -1,66 +1,67 @@
+	
 <!--
 Format of days.xml
-    <days>
-        <day weekday="">
-            <timeslot start=" end="">
-                <course>
-                    <booking>
-                        <courseCode></courseCode>
-                        <courseType></courseType>
-                        <room></room>
-                        <instructor></instructor>
-                    </booking>
-                </course>
-            </timeslot>
+	<days>
+		<day weekday="">
+			<timeslot start=" end="">
+				<course>
+					<booking>
+						<courseCode></courseCode>
+						<courseType></courseType>
+						<room></room>
+						<instructor></instructor>
+					</booking>
+				</course>
+			</timeslot>
 	</day>
-    </days>
+	</days>
 -->
 
-    <days>
+<days>
 	<day weekday="MON">
-             <booking>
-                <timeslot start="10:30" end="12:20"></timeslot>
-                <courseCode>4650</courseCode>
-                <courseType>lab</courseType>
-                <room>se12-306</room>
-		<instructor>medhat elmasry</instructor>
-            </booking>
-            <booking>
-                <timeslot start="15:30" end="16:20"></timeslot>
-                <courseCode>4910</courseCode>
-                <courseType>lec</courseType>
-                <room>sw1-2005</room>
-		<instructor>richard chau</instructor>
-            </booking>
-            <booking>
-                <timeslot start="16:30" end="17:20"></timeslot>
-                <courseCode>4650</courseCode>
-                <courseType>lec</courseType>
-                <room>se6-205</room>
-		<instructor>medhat elmasry</instructor>
-            </booking>
+		<booking>
+			<timeslot start="10:30" end="12:20"></timeslot>
+			<courseCode>4650</courseCode>
+			<courseType>lab</courseType>
+			<room>se12-306</room>
+			<instructor>medhat elmasry</instructor>
+		</booking>
+		<booking>
+			<timeslot start="15:30" end="16:20"></timeslot>
+			<courseCode>4910</courseCode>
+			<courseType>lec</courseType>
+			<room>sw1-2005</room>
+			<instructor>richard chau</instructor>
+		</booking>
+		<booking>
+			<timeslot start="16:30" end="17:20"></timeslot>
+			<courseCode>4650</courseCode>
+			<courseType>lec</courseType>
+			<room>se6-205</room>
+			<instructor>medhat elmasry</instructor>
+		</booking>
 	</day>
 	<day weekday="TUE">
-            <booking>
-                <timeslot start="8:30" end="10:20"></timeslot>
-                <courseCode>4620</courseCode>
-                <courseType>lab</courseType>
-                <room>se12-306</room>
-		<instructor>bethany edmonds</instructor>
-            </booking>
-            <booking>
-                <timeslot start="12:30" end="13:20"></timeslot>
-                <courseCode>4650</courseCode>
-                <courseType>lec</courseType>
-                <room>se6-205</room>
-		<instructor>medhat elmasry</instructor>
-            </booking>
-            <booking>
-                <timeslot start="15:30" end="17:20"></timeslot>
-                <courseCode>4620</courseCode>
-                <courseType>lec</courseType>
-                <room>sw1-2020</room>
-		<instructor>bethany edmonds</instructor>
-            </booking>
+		<booking>
+			<timeslot start="08:30" end="10:20"></timeslot>
+			<courseCode>4620</courseCode>
+			<courseType>lab</courseType>
+			<room>se12-306</room>
+			<instructor>bethany edmonds</instructor>
+		</booking>
+		<booking>
+			<timeslot start="12:30" end="13:20"></timeslot>
+			<courseCode>4650</courseCode>
+			<courseType>lec</courseType>
+			<room>se6-205</room>
+			<instructor>medhat elmasry</instructor>
+		</booking>
+		<booking>
+			<timeslot start="15:30" end="17:20"></timeslot>
+			<courseCode>4620</courseCode>
+			<courseType>lec</courseType>
+			<room>sw1-2020</room>
+			<instructor>bethany edmonds</instructor>
+		</booking>
 	</day>		
-    </days>
+</days>
