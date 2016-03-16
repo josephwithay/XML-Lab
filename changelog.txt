@@ -1,9 +1,9 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-15 22:51 - Merged 
 2016-03-13 15:35 - Updated the 3 xml faucets to match new schedule.dtd
 2016-03-11 14:33 - Updated schedule according to the feedback given
-2016-03-15 22:12 - Updated Booking.php
 2016-03-10 15:11 - Booking class is done (just have to merge it with Timeslot.php and delete the file)
 2016-03-10 14:12 - fixed timetable.xml to have 24HR clock instead of 12HR
 2016-03-10 14:08 - created and filled in the timetable.xml file
