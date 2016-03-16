@@ -20,21 +20,21 @@ Format of courses.xml
 			<day weekday="MON"></day>
 			<timeslot start="15:30" end="16:20"></timeslot>
 			<courseType>Lec</courseType>
-			<room>sw1-2005</room>
+			<room>SW1-2005</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 		<booking>
 			<day weekday="THU"></day>
 			<timeslot start="09:30" end="10:20"></timeslot>
 			<courseType>Lec</courseType>
-			<room>sw5-1840</room>
+			<room>SW5-1840</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 		<booking>
 			<day weekday="THU"></day>
 			<timeslot start="15:30" end="16:20"></timeslot>
-			<courseType>lab</courseType>
-			<room>se12-306</room>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 	</course>

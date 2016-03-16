@@ -22,22 +22,22 @@ Format of days.xml
 		<booking>
 			<timeslot start="10:30" end="12:20"></timeslot>
 			<courseCode>4650</courseCode>
-			<courseType>lab</courseType>
-			<room>se12-306</room>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
 		<booking>
 			<timeslot start="15:30" end="16:20"></timeslot>
 			<courseCode>4910</courseCode>
-			<courseType>lec</courseType>
-			<room>sw1-2005</room>
+			<courseType>Lec</courseType>
+			<room>SW1-2005</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 		<booking>
 			<timeslot start="16:30" end="17:20"></timeslot>
 			<courseCode>4650</courseCode>
-			<courseType>lec</courseType>
-			<room>se6-205</room>
+			<courseType>Lec</courseType>
+			<room>SE6-205</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
 	</day>
@@ -45,22 +45,22 @@ Format of days.xml
 		<booking>
 			<timeslot start="08:30" end="10:20"></timeslot>
 			<courseCode>4620</courseCode>
-			<courseType>lab</courseType>
-			<room>se12-306</room>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
 			<instructor>Bethany Edmonds</instructor>
 		</booking>
 		<booking>
 			<timeslot start="12:30" end="13:20"></timeslot>
 			<courseCode>4650</courseCode>
-			<courseType>lec</courseType>
-			<room>se6-205</room>
+			<courseType>Lec</courseType>
+			<room>SE6-205</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
 		<booking>
 			<timeslot start="15:30" end="17:20"></timeslot>
 			<courseCode>4620</courseCode>
-			<courseType>lec</courseType>
-			<room>sw1-2020</room>
+			<courseType>Lec</courseType>
+			<room>SW1-2020</room>
 			<instructor>Bethany Edmonds</instructor>
 		</booking>
 	</day>		
