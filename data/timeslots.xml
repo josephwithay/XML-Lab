@@ -3,8 +3,10 @@ Format of timeslots.xml
     <timeslots>
 	<timeslot start="" end="">
             <day weekday="">
-                <course code="" type="">
+                <course>
                     <booking>
+                        <courseCode></courseCode>
+                        <courseType></courseType>
 			<room></room>
 			<instructor></instructor>
                     </booking>
@@ -14,15 +16,30 @@ Format of timeslots.xml
     </timeslots>
 -->
 
-	<timeslots>
-		<timeslot start="12:30" end="14:20">
-			<day weekday="WED">
-				<course code="4850" type="Lec">
-					<booking>
-						<room>se6-207</room>
-						<instructor>jim parry</instructor>
-					</booking>
-				</course>
-			</day>
-		</timeslot>
-	</timeslots>
+    <timeslots>
+        <timeslot start="8:30" end="10:20">
+            <booking>
+                <day weekday="TUE"></day>
+                    <courseCode>4620</courseCode>
+                    <courseType>lab</courseType>
+                    <room>se12-306</room>
+                    <instructor>bethany edmonds</instructor>
+            </booking>
+            <booking>
+                <day weekday="FRI"></day>
+                    <courseCode>4660</courseCode>
+                    <courseType>lec</courseType>
+                    <room>sw9-206</room>
+                    <instructor>steve fabiszewski</instructor>
+            </booking>
+	</timeslot>
+	<timeslot start="12:30" end="14:20">
+            <booking>
+                <day weekday="WED"></day>
+                    <courseCode>4850</courseCode>
+                    <courseType>lec</courseType>
+                    <room>se6-207</room>
+                    <instructor>jim parry</instructor>
+            </booking>
+	</timeslot>
+    </timeslots>
