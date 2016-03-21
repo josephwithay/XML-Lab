@@ -63,26 +63,26 @@ Class Booking extends CI_Model
 
 }
 
-function getDays(){
-	
-}
-
-function getCourses(){
-	
-}
-
-function getTimeslots(){
-	
-}
-
-function searchTimetableByDay(){
-	
-}
-
-function searchTimetableByTimeslot(){
-	
-}
-
-function searchTimetableByCourse(){
-	
-}
+//function getDays(){
+//	
+//}
+//
+//function getCourses(){
+//	
+//}
+//
+//function getTimeslots(){
+//	
+//}
+//
+//function searchTimetableByDay(){
+//	
+//}
+//
+//function searchTimetableByTimeslot(){
+//	
+//}
+//
+//function searchTimetableByCourse(){
+//	
+//}
