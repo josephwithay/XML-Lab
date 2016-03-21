@@ -15,27 +15,22 @@ and open the template in the editor.
 		<day weekday="FRI">Friday</day>
 	</days>
 	<timeslots>
-		<timeslot start="8:30" end="9:20">8:30 AM</timeslot>
-		<timeslot start="9:30" end="10:20">9:30 AM</timeslot>
-		<timeslot start="10:30" end="11:20">10:30 AM</timeslot>
-		<timeslot start="11:30" end="12:20">11:30 AM</timeslot>
-		<timeslot start="12:30" end="13:20">12:30 PM</timeslot>
-		<timeslot start="13:30" end="14:20">1:30 PM</timeslot>
-		<timeslot start="14:30" end="15:20">2:30 PM</timeslot>
-		<timeslot start="15:30" end="16:20">3:30 PM</timeslot>
-		<timeslot start="16:30" end="17:20">4:30 PM</timeslot>
+		<timeslot start="08:30" end="09:20">08:30</timeslot>
+		<timeslot start="09:30" end="10:20">09:30</timeslot>
+		<timeslot start="10:30" end="11:20">10:30</timeslot>
+		<timeslot start="11:30" end="12:20">11:30</timeslot>
+		<timeslot start="12:30" end="13:20">12:30</timeslot>
+		<timeslot start="13:30" end="14:20">13:30</timeslot>
+		<timeslot start="14:30" end="15:20">14:30</timeslot>
+		<timeslot start="15:30" end="16:20">15:30</timeslot>
+		<timeslot start="16:30" end="17:20">16:30</timeslot>
 	</timeslots>
 	<courses>
-		<course code="4620" type="Lec">ACIT4620 Lec</course>
-		<course code="4620" type="Lab">ACIT4620 Lab</course>
-		<course code="4650" type="Lec">ACIT4650 Lec</course>
-		<course code="4650" type="Lab">ACIT4650 Lab</course>
-		<course code="4660" type="Lec">ACIT4660 Lec</course>
-		<course code="4660" type="Lab">ACIT4660 Lab</course>
-		<course code="4770" type="Lec">ACIT4770 Lab</course>
-		<course code="4850" type="Lec">ACIT4850 Lec</course>
-		<course code="4850" type="Lab">ACIT4850 Lab</course>
-		<course code="4910" type="Lec">ACIT4910 Lec</course>
-		<course code="4910" type="Lab">ACIT4910 Lab</course>
+		<course courseCode="4620">ACIT 4620</course>
+		<course courseCode="4650">ACIT 4650</course>
+		<course courseCode="4660">ACIT 4660</course>
+		<course courseCode="4770">ACIT 4770</course>
+		<course courseCode="4850">ACIT 4850</course>
+		<course courseCode="4910">ACIT 4910</course>
 	</courses>
 </timetable>
