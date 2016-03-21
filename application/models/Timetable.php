@@ -14,7 +14,7 @@ class Timetable extends CI_Model
 	public function __construct()
 	{
 		parent::__construct();
-		$this->xml = simplexml_load_file(DATAPATH . 'timetable.xml');
+		$this->xml = simplexml_load_file(DATAPATH . 'master.xml', "SimpleXMLElement", LIBXML_NOENT);
 
 		//build a full list of days
 		foreach ($this->xml->days->day as $day)
@@ -61,4 +61,28 @@ Class Booking extends CI_Model
 		$this->instructor = (string) $detail['instructor'];
 	}
 
+}
+
+function getDays(){
+	
+}
+
+function getCourses(){
+	
+}
+
+function getTimeslots(){
+	
+}
+
+function searchTimetableByDay(){
+	
+}
+
+function searchTimetableByTimeslot(){
+	
+}
+
+function searchTimetableByCourse(){
+	
 }
