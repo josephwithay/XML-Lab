@@ -1,45 +1,46 @@
+	
 <!-- 
 Format of timeslots.xml
-    <timeslots>
+	<timeslots>
 	<timeslot start="" end="">
-            <day weekday="">
-                <course>
-                    <booking>
-                        <courseCode></courseCode>
-                        <courseType></courseType>
+			<day weekday="">
+				<course>
+					<booking>
+						<courseCode></courseCode>
+						<courseType></courseType>
 			<room></room>
 			<instructor></instructor>
-                    </booking>
+					</booking>
 		</course>
-            </day>
+			</day>
 	</timeslot>
-    </timeslots>
+	</timeslots>
 -->
 
-    <timeslots>
-        <timeslot start="8:30" end="10:20">
-            <booking>
-                <day weekday="TUE"></day>
-                    <courseCode>4620</courseCode>
-                    <courseType>lab</courseType>
-                    <room>se12-306</room>
-                    <instructor>bethany edmonds</instructor>
-            </booking>
-            <booking>
-                <day weekday="FRI"></day>
-                    <courseCode>4660</courseCode>
-                    <courseType>lec</courseType>
-                    <room>sw9-206</room>
-                    <instructor>steve fabiszewski</instructor>
-            </booking>
+<timeslots>
+	<timeslot start="08:30" end="10:20">
+		<booking>
+			<day weekday="TUE"></day>
+			<courseCode>4620</courseCode>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
+			<instructor>Bethany Edmonds</instructor>
+		</booking>
+		<booking>
+			<day weekday="FRI"></day>
+			<courseCode>4660</courseCode>
+			<courseType>Lec</courseType>
+			<room>SW9-206</room>
+			<instructor>Steve Fabiszewski</instructor>
+		</booking>
 	</timeslot>
 	<timeslot start="12:30" end="14:20">
-            <booking>
-                <day weekday="WED"></day>
-                    <courseCode>4850</courseCode>
-                    <courseType>lec</courseType>
-                    <room>se6-207</room>
-                    <instructor>jim parry</instructor>
-            </booking>
+		<booking>
+			<day weekday="WED"></day>
+			<courseCode>4850</courseCode>
+			<courseType>Lec</courseType>
+			<room>SE6-207</room>
+			<instructor>James Parry</instructor>
+		</booking>
 	</timeslot>
-    </timeslots>
+</timeslots>

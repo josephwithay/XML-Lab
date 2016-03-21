@@ -1,78 +1,66 @@
+	
 <!--
 Format of courses.xml
-    <course code="" type="">
+	<course code="" type="">
 	<timeslot start="" end="">
-            <day weekday="">
+			<day weekday="">
 		<booking>
-                    <courseCode></courseCode>
-                    <courseType></courseType>
-                    <room></room>
-                    <instructor></instructor>
+					<courseCode></courseCode>
+					<courseType></courseType>
+					<room></room>
+					<instructor></instructor>
 		</booking>
-            </day>
+			</day>
 	</timeslot>
-    </course>
+	</course>
 -->
-    <courses>
+<courses>
 	<course courseCode="4910">
-            <booking>
-                <day weekday="MON"></day>
-                <timeslot start="15:30" end="16:20"></timeslot>
-                <courseType>lec</courseType>
-		<room>sw1-2005</room>
-		<instructor>richard chau</instructor>
-            </booking>
-            <booking>
-                <day weekday="THU"></day>
-                <timeslot start="09:30" end="10:20"></timeslot>
-                <courseType>lec</courseType>
-		<room>sw5-1840</room>
-		<instructor>richard chau</instructor>
-            </booking>
-	</course>
-	<course courseCode="4910">
-            <booking>
-                <day weekday="THU"></day>
-                <timeslot start="15:30" end="16:20"></timeslot>
-                <courseType>lab</courseType>
-                <room>se12-306</room>
-                <instructor>richard chau</instructor>
-            </booking>
-	</course>
-	<course courseCode="4850">
-            <booking>
-                <day weekday="THU"></day>
-                <timeslot start="13:30" end="15:20"></timeslot>
-                <courseType>lab</courseType>
-		<room>se12-308</room>
-		<instructor>james parry</instructor>
-            </booking>
+		<booking>
+			<day weekday="MON"></day>
+			<timeslot start="15:30" end="16:20"></timeslot>
+			<courseType>Lec</courseType>
+			<room>SW1-2005</room>
+			<instructor>Richard Chau</instructor>
+		</booking>
+		<booking>
+			<day weekday="THU"></day>
+			<timeslot start="09:30" end="10:20"></timeslot>
+			<courseType>Lec</courseType>
+			<room>SW5-1840</room>
+			<instructor>Richard Chau</instructor>
+		</booking>
+		<booking>
+			<day weekday="THU"></day>
+			<timeslot start="15:30" end="16:20"></timeslot>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
+			<instructor>Richard Chau</instructor>
+		</booking>
 	</course>
 	<course courseCode="4660">
-            <booking>
-                <day weekday="FRI"></day>
-                <timeslot start="08:30" end="10:20"></timeslot>
-                <courseType>lec</courseType>
-		<room>sw9-206</room>
-		<instructor>steve fabiszewski</instructor>
-            </booking>
+		<booking>
+			<day weekday="FRI"></day>
+			<timeslot start="08:30" end="10:20"></timeslot>
+			<courseType>Lec</courseType>
+			<room>SW9-206</room>
+			<instructor>Steve Fabiszewski</instructor>
+		</booking>
+		<booking>
+			<day weekday="FRI"></day>
+			<timeslot start="13:30" end="15:20"></timeslot>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
+			<instructor>Steve Fabiszewski</instructor>
+		</booking>
 	</course>
-	<course courseCode="4660">
-            <booking>
-                <day weekday="FRI"></day>
-                <timeslot start="13:30" end="15:20"></timeslot>
-                <courseType>lab</courseType>
-		<room>se12-306</room>
-		<instructor>steve fabiszewski</instructor>
-            </booking>
+	<course courseCode="4770">
+		<booking>
+			<day weekday="FRI"></day>
+			<timeslot start="10:30" end="12:20"></timeslot>
+			<courseType>Lab</courseType>
+			<room>SE12-306</room>
+			<instructor>Trevor Lord</instructor>
+		</booking>
 	</course>
-        <course courseCode="4770">
-            <booking>
-                <day weekday="FRI"></day>
-                <timeslot start="10:30" end="12:20"></timeslot>
-                <courseType>lab</courseType>
-		<room>se12-306</room>
-                <instructor>trevor lord</instructor>
-            </booking>
-	</course>
-    </courses>
+</courses>
