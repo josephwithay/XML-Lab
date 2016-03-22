@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
 		foreach ($timeslots_bookings as $booking) 
 		{
 			//parse view fragment and add to string
-			$fragments_by_days .= $this->parser->parse('booking', $booking, TRUE);
+			$fragments_by_timeslots .= $this->parser->parse('booking', $booking, TRUE);
 		}
 		$data['timeslots'] = $fragments_by_timeslots;
 		
@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 		 *************************/
 		$weekdays = array();
 		
-		foreach ($this->timetable->getDays() as $weekday => $weekday_name) 
+		foreach ($this->timetable->getDaysDropdown() as $weekday => $weekday_name) 
 		{
 			$weekdays[] = array('key' => $weekday, 'value' => $weekday_name);
 		}
@@ -63,7 +63,7 @@ class Welcome extends CI_Controller {
 		 *************************/
 		$timeslots = array();
 		
-		foreach ($this->timetable->getTimeslots() as $timeslot => $timeslot_value) 
+		foreach ($this->timetable->getTimeslotsDropdown() as $timeslot => $timeslot_value) 
 		{
 			$timeslots[] = array('key' => $timeslot, 'value' => $timeslot_value);
 		}

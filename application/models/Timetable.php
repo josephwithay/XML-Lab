@@ -146,7 +146,7 @@ class Timetable extends CI_Model
 //		echo 'TIMESLOTS ARRAY </ br>';
 //		print_r($this->timeslots);
 //		echo 'COURSES ARRAY';
-//		print_r($this->courses);
+//		print_r($this->timeslotsDropdown);
 //		die();
 
 
@@ -177,16 +177,27 @@ class Timetable extends CI_Model
 	 * Accessors
 	 * ************************************************
 	 */
+	//retrieve a list of days 
+	function getDaysDropdown()
+	{
+		return isset($this->daysDropdown) ? $this->daysDropdown : null;
+	}
+
+	//retrieve a list of timeslots
+	function getTimeslotsDropdown()
+	{
+		return isset($this->timeslotsDropdown) ? $this->timeslotsDropdown : null;
+	}
 	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
 		return isset($this->days) ? $this->days : null;
 	}
 
-	//retrieve a list of timeslots
+	//retrieve a list of timeslots as an assoc. array
 	function getTimeslots()
 	{
-		return isset($this->timeslots) ? $this->slots : null;
+		return isset($this->timeslots) ? $this->timeslots : null;
 	}
 
 	//retrieve a list of courses
