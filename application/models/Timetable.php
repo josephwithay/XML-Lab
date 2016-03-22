@@ -20,6 +20,7 @@ class Timetable extends CI_Model
 		//build a full list of days
 		foreach ($this->xml->days as $days)
 		{
+			//there is more than one day in weekdays
 			foreach ($days->day as $day)
 			{
 				//a day can have more than one booking
@@ -43,6 +44,7 @@ class Timetable extends CI_Model
 					$instructor = $booking[0]->instructor;
 					$record['instructor'] = $instructor;
 
+					//add records into days array
 					$this->days[] = new Booking($record);
 				}
 			}
@@ -51,6 +53,7 @@ class Timetable extends CI_Model
 		//build a full list of timeslots
 		foreach ($this->xml->timeslots as $timeslots)
 		{
+			//there is more than one timeslot
 			foreach ($timeslots->timeslot as $time)
 			{
 				//a timeslot can have more than one booking
@@ -75,6 +78,7 @@ class Timetable extends CI_Model
 					$instructor = $booking[0]->instructor;
 					$record['instructor'] = $instructor;
 
+					//add records into timeslots array
 					$this->timeslots[] = new Booking($record);
 				}
 			}
@@ -83,6 +87,7 @@ class Timetable extends CI_Model
 		//build a full list of courses
 		foreach ($this->xml->courses as $courses)
 		{
+			//there is more than one course
 			foreach ($courses->course as $course)
 			{
 				//a course can have more than one booking
@@ -106,6 +111,7 @@ class Timetable extends CI_Model
 					$instructor = $booking[0]->instructor;
 					$record['instructor'] = $instructor;
 
+					//add records into courses array
 					$this->courses[] = new Booking($record);
 				}
 			}
@@ -116,8 +122,8 @@ class Timetable extends CI_Model
 		 * Debugging Mode
 		 * ******************************************** 
 		 */
-		print_r($this->timeslots);
-		die();
+		//print_r($this->timeslots);
+		//die();
 	}
 
 	/*
@@ -145,19 +151,19 @@ class Timetable extends CI_Model
 	 * Accessors
 	 * ************************************************
 	 */
-//retrieve a list of days as an assoc. array
+	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
 		return isset($this->days) ? $this->days : null;
 	}
 
-//retrieve a list of timeslots
+	//retrieve a list of timeslots
 	function getTimeslots()
 	{
 		return isset($this->timeslots) ? $this->timeslots : null;
 	}
 
-//retrieve a list of courses
+	//retrieve a list of courses
 	function getCourses()
 	{
 		return isset($this->courses) ? $this->courses : null;
@@ -169,23 +175,23 @@ Class Booking extends CI_Model
 {
 
 	public $weekday = "";
-	public $courseType = "";
-	public $courseCode = "";
 	public $start = "";
 	public $end = "";
+	public $courseType = "";
+	public $courseCode = "";
 	public $room = "";
 	public $instructor = "";
 
-// Constructor
-	public function __construct($detail)
+	// Constructor
+	public function __construct($detail = null)
 	{
 		parent::__construct();
 		$this->weekday = (String) $detail['weekday'];
-		$this->courseType = (string) $detail['courseType'];
-		$this->courseCode = (string) $detail['courseCode'];
-		$this->start = (string) $detail['start'];
-		$this->end = (string) $detail['end'];
-		$this->room = (string) $detail['room'];
-		$this->instructor = (string) $detail['instructor'];
+		$this->start = (String) $detail['start'];
+		$this->end = (String) $detail['end'];
+		$this->courseType = (String) $detail['courseType'];
+		$this->courseCode = (String) $detail['courseCode'];
+		$this->room = (String) $detail['room'];
+		$this->instructor = (String) $detail['instructor'];
 	}
 }
