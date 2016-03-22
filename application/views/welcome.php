@@ -1,6 +1,6 @@
 <?php
 if (!defined('APPPATH'))
-    exit('No direct script access allowed');
+	exit('No direct script access allowed');
 /**
  * views/template.php
  *
@@ -12,13 +12,13 @@ if (!defined('APPPATH'))
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>{title}</title>
-        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
-    </head>
-    <body>
-        <div class="container">
-            <div class="bookingsearch">
+	<head>
+		<title>{title}</title>
+		<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bookingsearch">
 				<h1>Search for courses!</h1>
 				<form name="search" action='welcome/search' id="dropdownsearch">
 					<select name="dropdownDays">
@@ -35,17 +35,17 @@ if (!defined('APPPATH'))
 				</form>
 				<div id="indexedList">
 					<h1>Bookings by Day</h1>
-						{days}    
+					{days}    
 					<h1>Bookings by Timeslot</h1>
-						{timeslots}
+					{timeslots}
 					<h1>Bookings by Course</h1>
-						{courses}
+					{courses}
 				</div>
 				<div id="bookingResult">
 					<h1>Results:</h1>
-						{searchResult}
+					{searchResult}
 				</div>
-            </div>
-        </div>
-    </body>
+			</div>
+		</div>
+	</body>
 </html>
