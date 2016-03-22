@@ -59,7 +59,7 @@ Format of courses.xml
 			<instructor>Trevor Lord</instructor>
 		</booking>
 	</course>
-        <course courseCode="4650">
+	<course courseCode="4650">
 		<booking>
 			<day weekday="MON">Monday</day>
 			<timeslot start="10:30" end="12:20">10:30 to 12:20</timeslot>
@@ -67,14 +67,14 @@ Format of courses.xml
 			<room>SE12-306</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
-                <booking>
+		<booking>
 			<day weekday="MON">Monday</day>
 			<timeslot start="16:30" end="17:20">16:30 to 17:20</timeslot>
 			<courseType>Lec</courseType>
 			<room>SE6-205</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
-                <booking>
+		<booking>
 			<day weekday="TUE">Tuesday</day>
 			<timeslot start="12:30" end="13:20">12:30 to 13:20</timeslot>
 			<courseType>Lec</courseType>
@@ -82,7 +82,7 @@ Format of courses.xml
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
 	</course>
-        <course courseCode="4620">
+	<course courseCode="4620">
 		<booking>
 			<day weekday="TUE">Tuesday</day>
 			<timeslot start="08:30" end="10:20">08:30 to 10:20</timeslot>
@@ -90,7 +90,7 @@ Format of courses.xml
 			<room>SE12-306</room>
 			<instructor>Bethany Edmunds</instructor>
 		</booking>
-                <booking>
+		<booking>
 			<day weekday="TUE">Tuesday</day>
 			<timeslot start="15:30" end="17:20">15:30 to 17:20</timeslot>
 			<courseType>Lec</courseType>
@@ -98,7 +98,7 @@ Format of courses.xml
 			<instructor>Bethany Edmunds</instructor>
 		</booking>
 	</course>
-        <course courseCode="4850">
+	<course courseCode="4850">
 		<booking>
 			<day weekday="WED">Wednesday</day>
 			<timeslot start="12:30" end="14:20">12:30 to 14:20</timeslot>
@@ -106,7 +106,7 @@ Format of courses.xml
 			<room>SE6-207</room>
 			<instructor>James Parry</instructor>
 		</booking>
-                <booking>
+		<booking>
 			<day weekday="THU">Thursday</day>
 			<timeslot start="13:30" end="15:20">13:30 to 15:20</timeslot>
 			<courseType>Lab</courseType>
