@@ -149,6 +149,7 @@ class Timetable extends CI_Model
 //		print_r($this->courses);
 //		die();
 
+
 	}
 
 	/*
@@ -179,13 +180,13 @@ class Timetable extends CI_Model
 	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
-		return isset($this->daysDropdown) ? $this->daysDropdown : null;
+		return isset($this->days) ? $this->days : null;
 	}
 
 	//retrieve a list of timeslots
 	function getTimeslots()
 	{
-		return isset($this->timeslotsDropdown) ? $this->timeslotsDropdown : null;
+		return isset($this->timeslots) ? $this->slots : null;
 	}
 
 	//retrieve a list of courses

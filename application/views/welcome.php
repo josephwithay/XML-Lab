@@ -33,6 +33,18 @@ if (!defined('APPPATH'))
 					</select>
 					<input type='submit' value='Submit'>
 				</form>
+				<div id="indexedList">
+					<h1>Bookings by Day</h1>
+						{days}    
+					<h1>Bookings by Timeslot</h1>
+						{timeslots}
+					<h1>Bookings by Course</h1>
+						{courses}
+				</div>
+				<div id="bookingResult">
+					<h1>Results:</h1>
+						{searchResult}
+				</div>
             </div>
         </div>
     </body>
