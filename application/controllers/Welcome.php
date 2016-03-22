@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 		//defining data array
 		$data = array();
 		//our default title
-		$this->data['title'] = "Bookings";
+		$data['title'] = "Bookings";
 
 		/*************************
 		 * Booking by days
@@ -24,14 +24,26 @@ class Welcome extends CI_Controller {
 		$data['days'] = $fragments_by_days;
 
 		/*************************
-		 * Booking search list
+		 * Day booking search list
 		 *************************/
 		$weekdays = array();
-		foreach ($this->timetable->getDays() as $weekday => $weekday_value) 
+		
+		foreach ($this->timetable->getDays() as $weekday => $weekday_name) 
 		{
-			$weekdays[] = array('key' => $weekday, 'value' => $weekday);
+			$weekdays[] = array('key' => $weekday, 'value' => $weekday_name);
 		}
 		$data['chooseDay'] = $weekdays;
+		
+		/*************************
+		 * Timeslot booking search list
+		 *************************/
+		$timeslots = array();
+		
+		foreach ($this->timetable->getTimeslots() as $timeslot => $timeslot_value) 
+		{
+			$timeslots[] = array('key' => $timeslot, 'value' => $timeslot_value);
+		}
+		$data['chooseTimeslot'] = $timeslots;
 
 		$this->parser->parse('welcome', $data);
 	}
