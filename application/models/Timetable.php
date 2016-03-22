@@ -62,19 +62,18 @@ Class Booking extends CI_Model
 	}
 
 }
-
-//function getDays(){
-//	
-//}
-//
-//function getCourses(){
-//	
-//}
-//
-//function getTimeslots(){
-//	
-//}
-//
+//retrieve a list of days as an assoc. array
+	function getDays(){
+		return $this->days;
+	}
+//retrieve a list of courses
+	function getCourses(){
+		return $this->courses; 
+	}
+//retrieve a list of timeslots
+	function getTimeslots(){
+		return $this->timeslots; 
+	}	
 //function searchTimetableByDay(){
 //	
 //}
