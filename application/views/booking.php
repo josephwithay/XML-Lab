@@ -1,5 +1,5 @@
-{course_program}{course_code} |
-{day_of_week}: {timeslot_start}-{timeslot_end} |
+{courseCode} |
+{weekday}: {start}-{end} |
 {instructor} |
 {room}
 <br>

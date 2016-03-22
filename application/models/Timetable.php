@@ -14,7 +14,7 @@ class Timetable extends CI_Model
 	public function __construct()
 	{
 		parent::__construct();
-		$this->xml = simplexml_load_file(DATAPATH . 'master.xml', "SimpleXMLElement", LIBXML_NOENT);
+		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
 
 		//build a full list of days
 		foreach ($this->xml->days->day as $day)
@@ -25,15 +25,30 @@ class Timetable extends CI_Model
 			$record = array();
 			
 			$record['weekday'] = $day['weekday'];
-			$record['timeslot'] = $booking['timeslot'];
-			$record['courseCode'] = $booking['courseCode'];
-			$record['periodStart'] = $booking['periodStart'];
-			$record['periodEnd'] = $booking['periodEnd'];
-			$record['room'] = $booking['room'];
-			$record['instructor'] = $booking['instructor'];
+			
+			$timeslot = $booking[0]->timeslot;
+			$record['start'] = $timeslot['start'];
+			$record['end'] = $timeslot['end'];
+			
+			$courseType = $booking[0]->courseType;
+			$record['courseType'] = $courseType;
+			
+			$courseCode = $booking[0]->courseCode;
+			$record['courseCode'] = $courseCode;
+			
+			$room = $booking[0]->room;
+			$record['room'] = $room;
+			
+			$instructor = $booking[0]->instructor;
+			$record['instructor'] = $instructor;
+			
+			
 			$this->days[] = new Booking($record);
 			
 			}
+			
+			print_r($this->days);
+			die();
 		}
 
 		//build a full list of timeslots
@@ -79,9 +94,10 @@ Class Booking extends CI_Model
 
 	public $weekday = "";
 	public $timeslot = "";
+	public $courseType = "";
 	public $courseCode = "";
-	public $periodStart = "";
-	public $periodEnd = "";
+	public $start = "";
+	public $end = "";
 	public $room = "";
 	public $instructor = "";
 
@@ -91,9 +107,10 @@ Class Booking extends CI_Model
 		parent::__construct();
 		$this->weekday = (String) $detail['weekday'];
 		$this->timeslot = (string) $detail['timeslot'];
+		$this->courseType = (string) $detail['courseType'];
 		$this->courseCode = (string) $detail['courseCode'];
-		$this->periodStart = (string) $detail['periodStart'];
-		$this->periodEnd = (string) $detail['periodEnd'];
+		$this->start = (string) $detail['start'];
+		$this->end = (string) $detail['end'];
 		$this->room = (string) $detail['room'];
 		$this->instructor = (string) $detail['instructor'];
 	}
