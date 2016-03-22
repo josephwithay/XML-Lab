@@ -3,13 +3,14 @@
 ********************
 
 ##MEMBERS
-Nancy Ra A00933130
-Li-Jen David Wang A00863447
-Yoseph Jo A00931712
+- Nancy Ra A00933130
+- Li-Jen David Wang A00863447
+- Yoseph Jo A00931712
 
 
 ##CONVENTIONS
-tab indentation
+- Tab Indentation
+- Allman Formatting
 
 ##FOLDERS
 /application		code igniter starter
