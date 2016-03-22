@@ -14,7 +14,7 @@ class Timetable extends CI_Model
 	public function __construct()
 	{
 		parent::__construct();
-		$this->xml = simplexml_load_file(DATAPATH . 'master.xml', "SimpleXMLElement", LIBXML_NOENT);
+		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
 
 		//build a full list of days
 		foreach ($this->xml->days->day as $day)
