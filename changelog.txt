@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-22 11:26 - Days and Timeslot xml has all information
 2016-03-22 01:41 - Days and Timeslots dropdown now populating data from timetable.xml
 2016-03-22 00:08 - Days dropdown is populating days array
 2016-03-21 23:41 - Fixed comments in Timetable model

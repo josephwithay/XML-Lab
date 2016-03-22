@@ -1,18 +1,17 @@
 	
 <!--
 Format of courses.xml
-	<course code="" type="">
-	<timeslot start="" end="">
-			<day weekday="">
+<courses>
+	<course courseCode="">
 		<booking>
-					<courseCode></courseCode>
-					<courseType></courseType>
-					<room></room>
-					<instructor></instructor>
+			<day weekday=""></day>
+			<timeslot start="" end=""></timeslot>
+			<courseType></courseType>
+			<room></room>
+			<instructor></instructor>
 		</booking>
-			</day>
-	</timeslot>
 	</course>
+</courses>
 -->
 <courses>
 	<course courseCode="4910">
