@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-21 20:39 - Created array for days faucet
 2016-03-21 19:45 - Autoload Booking model 
 2016-03-21 19:28 - Formatted master.xml, minor word changes is Timetable model and changed path of DATAPATH constant
 2016-03-21 18:30 - Add get (days/courses/timeslots) function in Timetable.php. Created welcome.php.
