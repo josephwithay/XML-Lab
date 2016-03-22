@@ -28,12 +28,15 @@ if (!defined('APPPATH'))
 					</select>
 					<select name="dropdownTimeslots">
 						{chooseTimeslot}
-						<option value="{key}"><{value}</option>
+						<option value="{key}">{value}</option>
 						{/chooseTimeslot}
 					</select>
 					<input type='submit' value='Submit'>
 				</form>
             </div>
+			<div>
+				{days}
+			</div>
         </div>
     </body>
 </html>

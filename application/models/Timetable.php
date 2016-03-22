@@ -19,7 +19,21 @@ class Timetable extends CI_Model
 		//build a full list of days
 		foreach ($this->xml->days->day as $day)
 		{
-			$this->days[] = new Booking($day);
+			 //a day can have more than one booking
+            foreach($day->booking as $booking)
+            {
+			$record = array();
+			
+			$record['weekday'] = $day['weekday'];
+			$record['timeslot'] = $booking['timeslot'];
+			$record['courseCode'] = $booking['courseCode'];
+			$record['periodStart'] = $booking['periodStart'];
+			$record['periodEnd'] = $booking['periodEnd'];
+			$record['room'] = $booking['room'];
+			$record['instructor'] = $booking['instructor'];
+			$this->days[] = new Booking($record);
+			
+			}
 		}
 
 		//build a full list of timeslots
@@ -35,6 +49,29 @@ class Timetable extends CI_Model
 		}
 	}
 
+	//retrieve a list of days as an assoc. array
+	function getDays(){
+		return $this->days;
+	}
+	//retrieve a list of courses
+	function getCourses(){
+		return $this->courses; 
+	}
+	//retrieve a list of timeslots
+	function getTimeslots(){
+		return $this->timeslots; 
+	}	
+	//function searchTimetableByDay(){
+	//	
+	//}
+	//
+	//function searchTimetableByTimeslot(){
+	//	
+	//}
+	//
+	//function searchTimetableByCourse(){
+	//	
+	//}
 }
 
 Class Booking extends CI_Model
@@ -52,7 +89,7 @@ Class Booking extends CI_Model
 	public function __construct($detail)
 	{
 		parent::__construct();
-		$this->weekday = (string) $detail['weekday'];
+		$this->weekday = (String) $detail['weekday'];
 		$this->timeslot = (string) $detail['timeslot'];
 		$this->courseCode = (string) $detail['courseCode'];
 		$this->periodStart = (string) $detail['periodStart'];
@@ -62,26 +99,3 @@ Class Booking extends CI_Model
 	}
 
 }
-//retrieve a list of days as an assoc. array
-	function getDays(){
-		return $this->days;
-	}
-//retrieve a list of courses
-	function getCourses(){
-		return $this->courses; 
-	}
-//retrieve a list of timeslots
-	function getTimeslots(){
-		return $this->timeslots; 
-	}	
-//function searchTimetableByDay(){
-//	
-//}
-//
-//function searchTimetableByTimeslot(){
-//	
-//}
-//
-//function searchTimetableByCourse(){
-//	
-//}
