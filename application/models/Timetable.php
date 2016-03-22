@@ -157,20 +157,49 @@ class Timetable extends CI_Model
 	 * Search Methods by each Facet
 	 * ************************************************
 	 */
-	function searchTimetableByDay($day,$slot)
+	function searchTimetableByDay($day,$timeslot)
 	{
+		$results = array();
 		
+		foreach($this->days as $booking)
+		{
+			if($booking->weekday === $day && $booking->start === $timeslot)
+			{
+				$results[] = $booking;
+			}
+		}
+			return $results;
 	}
+			
+	function searchTimetableByTimeslot($day,$timeslot)
+	{
+        $results = array();
+        
+        foreach($this->timeslots as $booking)
+        {
+            if($booking->weekday === $day && $booking->start === $timeslot)
+            {
+                $results[] = $booking;
+            }
+        }
+        
+        return $results;
+    }
 
-	function searchTimetableByTimeslot($day,$slot)
+	function searchTimetableByCourse($day,$timeslot)
 	{
-		
-	}
-
-	function searchTimetableByCourse($day,$slot)
-	{
-		
-	}
+        $results = array();
+        
+        foreach($this->courses as $booking)
+        {
+            if($booking->weekday === $day && $booking->start === $timeslot)
+            {
+                $results[] = $booking;
+            }
+        }
+        
+        return $results;
+    }
 
 	/*
 	 * ************************************************

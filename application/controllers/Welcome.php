@@ -87,10 +87,7 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function search() 
-	{
-		//load models
-        $this->load->model('timetable');
-		
+	{	
 		//instantiate variables to be used
 		$data = array();       
         $results = array();
@@ -105,7 +102,7 @@ class Welcome extends CI_Controller {
         $data['title'] = "Bookings for " . $day . "@" . $timeslot;
 		
 		//matching bookings by day results to be added to results array
-		foreach($this->timetable->getDays($day, $timeslot) as $booking)
+		foreach($this->timetable->searchTimetableByDay($day, $timeslot) as $booking)
         {
             $booking = (array)$booking; 
             $dayFacet = $booking; 
@@ -113,7 +110,7 @@ class Welcome extends CI_Controller {
             $results[] = $booking;
         }
 		//matching bookings by timeslot results to be added to results array
-		foreach($this->timetable->getTimeslots($day, $timeslot) as $booking)
+		foreach($this->timetable->searchTimetableByTimeslot($day, $timeslot) as $booking)
         {
             $booking = (array)$booking; 
             $timeslotFacet = $booking;
@@ -121,7 +118,7 @@ class Welcome extends CI_Controller {
             $results[] = $booking;
         }
 		//matching bookings by course results to be added to results array
-		foreach($this->timetable->getCourses($day, $timeslot) as $booking)
+		foreach($this->timetable->searchTimetableByCourse($day, $timeslot) as $booking)
         {
             $booking = (array)$booking; 
             $courseFacet = $booking;
@@ -159,7 +156,7 @@ class Welcome extends CI_Controller {
         }  
         
         //parse the template
-        $this->parser->parse('booking_results', $data);
+        $this->parser->parse('results', $data);
     }
 		
 	}
