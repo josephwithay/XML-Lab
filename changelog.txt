@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-31 18:30 - Add get (days/courses/timeslots) function in Timetable.php. Created welcome.php.
 2016-03-21 13:36 - Added usable methods that will be used in the future
 2016-03-15 22:00 - Made capitalization changes in instructor names; reformatted XML files
 2016-03-13 15:35 - Updated the 3 xml faucets to match new schedule.dtd
