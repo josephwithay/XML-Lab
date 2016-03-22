@@ -7,16 +7,35 @@ class Timetable extends CI_Model
 {
 
 	protected $xml = null;
+	protected $schedule = null;
+	
 	protected $days = array();
 	protected $timeslots = array();
 	protected $courses = array();
+	
+	protected $daysDropdown = array();
+	protected $timeslotsDropdown = array();
 
 	public function __construct()
 	{
 		parent::__construct();
+		
+		//load the xml files
 		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
+		$this->schedule = simplexml_load_file(DATAPATH . 'timetable' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
+		
 		$record = array();
+		
+		foreach ($this->schedule->days as $daysD)
+		{
+			$this->daysDropdown = $daysD;
+		}
 
+		foreach ($this->schedule->timeslots as $timeslotsD)
+		{
+			$this->timeslotsDropdown = $timeslotsD;
+		}
+		
 		//build a full list of days
 		foreach ($this->xml->days as $days)
 		{
@@ -27,7 +46,7 @@ class Timetable extends CI_Model
 				foreach ($day->booking as $booking)
 				{
 					$record['weekday'] = $day['weekday'];
-
+					
 					$timeslot = $booking[0]->timeslot;
 					$record['start'] = $timeslot['start'];
 					$record['end'] = $timeslot['end'];
@@ -122,8 +141,14 @@ class Timetable extends CI_Model
 		 * Debugging Mode
 		 * ******************************************** 
 		 */
-		//print_r($this->timeslots);
-		//die();
+//		echo 'DAYS ARRAY </ br>';
+//		print_r($this->days);
+//		echo 'TIMESLOTS ARRAY </ br>';
+//		print_r($this->timeslots);
+//		echo 'COURSES ARRAY';
+//		print_r($this->courses);
+//		die();
+
 	}
 
 	/*
@@ -154,13 +179,13 @@ class Timetable extends CI_Model
 	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
-		return isset($this->days) ? $this->days : null;
+		return isset($this->daysDropdown) ? $this->daysDropdown : null;
 	}
 
 	//retrieve a list of timeslots
 	function getTimeslots()
 	{
-		return isset($this->timeslots) ? $this->timeslots : null;
+		return isset($this->timeslotsDropdown) ? $this->timeslotsDropdown : null;
 	}
 
 	//retrieve a list of courses
@@ -183,7 +208,7 @@ Class Booking extends CI_Model
 	public $instructor = "";
 
 	// Constructor
-	public function __construct($detail = null)
+	public function __construct($detail=null)
 	{
 		parent::__construct();
 		$this->weekday = (String) $detail['weekday'];
