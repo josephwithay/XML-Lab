@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-23 13:40 - Removed extra closing tag
 2016-03-22 17:18 - Formatting changes in some files(spaces to tabs), corrected Timeslot function
 2016-03-22 17:10 - Removed timetable.xml and fixed formatting
 2016-03-22 17:01 - Updated dropdown values and added htaccess

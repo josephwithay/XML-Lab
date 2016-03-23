@@ -1,4 +1,4 @@
-<?php>
+<?php
 /**
  *  This is a model for the control data in our timetable slots
  */
