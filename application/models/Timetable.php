@@ -1,5 +1,4 @@
-<?php
-
+<?php>
 /**
  *  This is a model for the control data in our timetable slots
  */
@@ -8,16 +7,18 @@ class Timetable extends CI_Model
 
 	protected $xml = null;
 	protected $schedule = null;
+	
 	protected $days = array();
 	protected $timeslots = array();
 	protected $courses = array();
+	
 	protected $daysDropdown = array();
 	protected $timeslotsDropdown = array();
 
 	public function __construct()
 	{
 		parent::__construct();
-
+		
 		//load the xml files
 		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
 		$record = array();
@@ -32,8 +33,9 @@ class Timetable extends CI_Model
 				foreach ($day->booking as $booking)
 				{
 					$record['weekday'] = $day['weekday'];
-
+					
 					$timeslot = $booking[0]->timeslot;
+					$record['timeslot'] = $timeslot;
 					$record['start'] = $timeslot['start'];
 					$record['end'] = $timeslot['end'];
 
@@ -66,7 +68,7 @@ class Timetable extends CI_Model
 				//a timeslot can have more than one booking
 				foreach ($time->booking as $booking)
 				{
-					
+					$record['timeslot'] = $timeslot;
 					$record['start'] = $time['start'];
 					$record['end'] = $time['end'];
 
@@ -107,6 +109,7 @@ class Timetable extends CI_Model
 					$record['weekday'] = $day['weekday'];
 
 					$timeslot = $booking[0]->timeslot;
+					$record['timeslot'] = $timeslot;
 					$record['start'] = $timeslot['start'];
 					$record['end'] = $timeslot['end'];
 
@@ -124,14 +127,6 @@ class Timetable extends CI_Model
 				}
 			}
 		}
-
-		/*
-		 * *******************************************
-		 * Debugging Mode
-		 * ******************************************** 
-		 */
-//		print_r($this->daysDropdown);
-//		die();
 	}
 
 	/*
@@ -139,43 +134,42 @@ class Timetable extends CI_Model
 	 * Search Methods by each Facet
 	 * ************************************************
 	 */
-
-	function searchTimetableByDay($day, $timeslot)
+	function searchTimetableByDay($day,$timeslot)
+	{
+		$results = array();
+		
+		foreach($this->days as $booking)
+		{
+			if($booking->weekday === $day && $booking->start === $timeslot)
+			{
+				$results[] = $booking;
+			}
+		}
+			return $results;
+	}
+			
+	function searchTimetableByTimeslot($day, $timeslot) 
 	{
 		$results = array();
 
-		foreach ($this->days as $booking)
+		foreach ($this->timeslots as $booking) 
 		{
 			if ($booking->weekday === $day && $booking->start === $timeslot)
 			{
 				$results[] = $booking;
 			}
 		}
-		return $results;
-	}
-
-	function searchTimetableByTimeslot($day, $timeslot)
-	{
-		$results = array();
-
-		foreach ($this->timeslots as $booking)
-		{
-			if ($booking->weekday === $day && $booking->start === $timeslot)
-			{
-				$results[] = $booking;
-			}
-		}
 
 		return $results;
 	}
 
-	function searchTimetableByCourse($day, $timeslot)
+	function searchTimetableByCourse($day, $timeslot) 
 	{
 		$results = array();
 
-		foreach ($this->courses as $booking)
+		foreach ($this->courses as $booking) 
 		{
-			if ($booking->weekday === $day && $booking->start === $timeslot)
+			if ($booking->weekday === $day && $booking->start === $timeslot) 
 			{
 				$results[] = $booking;
 			}
@@ -189,61 +183,58 @@ class Timetable extends CI_Model
 	 * Accessors
 	 * ************************************************
 	 */
-
 	//retrieve a list of days 
 	function getDaysDropdown()
 	{
-		return isset($this->daysDropdown) ? $this->daysDropdown : null;
+		return $this->daysDropdown;
 	}
 
 	//retrieve a list of timeslots
 	function getTimeslotsDropdown()
 	{
-		return isset($this->timeslotsDropdown) ? $this->timeslotsDropdown : null;
+		return $this->timeslotsDropdown;
 	}
-
 	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
-		return $this->days;
+		return isset($this->days) ? $this->days : null;
 	}
 
 	//retrieve a list of timeslots as an assoc. array
 	function getTimeslots()
 	{
-		return $this->timeslots;
+		return isset($this->timeslots) ? $this->timeslots : null;
 	}
 
 	//retrieve a list of courses
 	function getCourses()
 	{
-		return $this->courses;
+		return isset($this->courses) ? $this->courses : null;
 	}
 
 }
 
 Class Booking extends CI_Model
 {
-
 	public $weekday = "";
 	public $start = "";
 	public $end = "";
+	public $timeslot = "";
 	public $courseType = "";
 	public $courseCode = "";
 	public $room = "";
 	public $instructor = "";
 
 	// Constructor
-	public function __construct($detail = null)
+	public function __construct($detail=null)
 	{
-		parent::__construct();
 		$this->weekday = (String) $detail['weekday'];
 		$this->start = (String) $detail['start'];
 		$this->end = (String) $detail['end'];
+		$this->timeslot = (String) $detail['timeslot'];
 		$this->courseType = (String) $detail['courseType'];
 		$this->courseCode = (String) $detail['courseCode'];
 		$this->room = (String) $detail['room'];
 		$this->instructor = (String) $detail['instructor'];
 	}
-
 }
