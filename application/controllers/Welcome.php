@@ -55,7 +55,7 @@ class Welcome extends CI_Controller
 
 		foreach ($this->timetable->getDaysDropdown() as $weekday => $weekday_name)
 		{
-			$weekdays[] = array('key' => $weekday, 'value' => $weekday_name);
+			$weekdays[] = array('key' => $weekday_name, 'value' => $weekday_name);
 		}
 		$data['chooseDay'] = $weekdays;
 
@@ -66,7 +66,7 @@ class Welcome extends CI_Controller
 
 		foreach ($this->timetable->getTimeslotsDropdown() as $timeslot => $timeslot_value)
 		{
-			$timeslots[] = array('key' => $timeslot, 'value' => $timeslot_value);
+			$timeslots[] = array('key' => $timeslot_value, 'value' => $timeslot_value);
 		}
 		$data['chooseTimeslot'] = $timeslots;
 
