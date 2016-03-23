@@ -8,18 +8,16 @@ class Timetable extends CI_Model
 
 	protected $xml = null;
 	protected $schedule = null;
-	
 	protected $days = array();
 	protected $timeslots = array();
 	protected $courses = array();
-	
 	protected $daysDropdown = array();
 	protected $timeslotsDropdown = array();
 
 	public function __construct()
 	{
 		parent::__construct();
-		
+
 		//load the xml files
 		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
 		$record = array();
@@ -34,7 +32,7 @@ class Timetable extends CI_Model
 				foreach ($day->booking as $booking)
 				{
 					$record['weekday'] = $day['weekday'];
-					
+
 					$timeslot = $booking[0]->timeslot;
 					$record['start'] = $timeslot['start'];
 					$record['end'] = $timeslot['end'];
@@ -134,8 +132,6 @@ class Timetable extends CI_Model
 		 */
 //		print_r($this->daysDropdown);
 //		die();
-
-
 	}
 
 	/*
@@ -143,55 +139,57 @@ class Timetable extends CI_Model
 	 * Search Methods by each Facet
 	 * ************************************************
 	 */
-	function searchTimetableByDay($day,$timeslot)
+
+	function searchTimetableByDay($day, $timeslot)
 	{
 		$results = array();
-		
-		foreach($this->days as $booking)
+
+		foreach ($this->days as $booking)
 		{
-			if($booking->weekday === $day && $booking->start === $timeslot)
+			if ($booking->weekday === $day && $booking->start === $timeslot)
 			{
 				$results[] = $booking;
 			}
 		}
-			return $results;
+		return $results;
 	}
-			
-	function searchTimetableByTimeslot($day,$timeslot)
-	{
-        $results = array();
-        
-        foreach($this->timeslots as $booking)
-        {
-            if($booking->weekday === $day && $booking->start === $timeslot)
-            {
-                $results[] = $booking;
-            }
-        }
-        
-        return $results;
-    }
 
-	function searchTimetableByCourse($day,$timeslot)
+	function searchTimetableByTimeslot($day, $timeslot)
 	{
-        $results = array();
-        
-        foreach($this->courses as $booking)
-        {
-            if($booking->weekday === $day && $booking->start === $timeslot)
-            {
-                $results[] = $booking;
-            }
-        }
-        
-        return $results;
-    }
+		$results = array();
+
+		foreach ($this->timeslots as $booking)
+		{
+			if ($booking->weekday === $day && $booking->start === $timeslot)
+			{
+				$results[] = $booking;
+			}
+		}
+
+		return $results;
+	}
+
+	function searchTimetableByCourse($day, $timeslot)
+	{
+		$results = array();
+
+		foreach ($this->courses as $booking)
+		{
+			if ($booking->weekday === $day && $booking->start === $timeslot)
+			{
+				$results[] = $booking;
+			}
+		}
+
+		return $results;
+	}
 
 	/*
 	 * ************************************************
 	 * Accessors
 	 * ************************************************
 	 */
+
 	//retrieve a list of days 
 	function getDaysDropdown()
 	{
@@ -203,22 +201,23 @@ class Timetable extends CI_Model
 	{
 		return isset($this->timeslotsDropdown) ? $this->timeslotsDropdown : null;
 	}
+
 	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
-		return isset($this->days) ? $this->days : null;
+		return $this->days;
 	}
 
 	//retrieve a list of timeslots as an assoc. array
 	function getTimeslots()
 	{
-		return isset($this->timeslots) ? $this->timeslots : null;
+		return $this->timeslots;
 	}
 
 	//retrieve a list of courses
 	function getCourses()
 	{
-		return isset($this->courses) ? $this->courses : null;
+		return $this->courses;
 	}
 
 }
@@ -235,7 +234,7 @@ Class Booking extends CI_Model
 	public $instructor = "";
 
 	// Constructor
-	public function __construct($detail=null)
+	public function __construct($detail = null)
 	{
 		parent::__construct();
 		$this->weekday = (String) $detail['weekday'];
@@ -246,4 +245,5 @@ Class Booking extends CI_Model
 		$this->room = (String) $detail['room'];
 		$this->instructor = (String) $detail['instructor'];
 	}
+
 }

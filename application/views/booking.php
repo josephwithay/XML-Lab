@@ -1,5 +1,5 @@
-{courseCode} |
-{weekday}: {start}-{end} |
-{instructor} |
+<strong>{courseCode}</strong> -
+{weekday} - {start} to {end} -
+{instructor} -
 {room}
 <br>
