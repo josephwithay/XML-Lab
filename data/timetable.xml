@@ -24,15 +24,6 @@ and open the template in the editor.
 		<timeslot start="14:30" end="15:20">14:30</timeslot>
 		<timeslot start="15:30" end="16:20">15:30</timeslot>
 		<timeslot start="16:30" end="17:20">16:30</timeslot>
-		<!--Two hours slots-->
-		<timeslot start="08:30" end="10:20">08:30(2 hrs)</timeslot>
-		<timeslot start="09:30" end="11:20">09:30(2 hrs)</timeslot>
-		<timeslot start="10:30" end="12:20">10:30(2 hrs)</timeslot>
-		<timeslot start="11:30" end="13:20">11:30(2 hrs)</timeslot>
-		<timeslot start="12:30" end="14:20">12:30(2 hrs)</timeslot>
-		<timeslot start="13:30" end="15:20">13:30(2 hrs)</timeslot>
-		<timeslot start="14:30" end="16:20">14:30(2 hrs)</timeslot>
-		<timeslot start="15:30" end="17:20">15:30(2 hrs)</timeslot>
 	</timeslots>
 	<courses>
 		<course courseCode="4620">ACIT 4620</course>
