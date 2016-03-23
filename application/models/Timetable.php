@@ -22,19 +22,7 @@ class Timetable extends CI_Model
 		
 		//load the xml files
 		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
-		$this->schedule = simplexml_load_file(DATAPATH . 'timetable' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
-		
 		$record = array();
-		
-		foreach ($this->schedule->days as $daysD)
-		{
-			$this->daysDropdown = $daysD;
-		}
-
-		foreach ($this->schedule->timeslots as $timeslotsD)
-		{
-			$this->timeslotsDropdown = $timeslotsD;
-		}
 		
 		//build a full list of days
 		foreach ($this->xml->days as $days)
@@ -64,8 +52,10 @@ class Timetable extends CI_Model
 					$record['instructor'] = $instructor;
 
 					//add records into days array
+					
 					$this->days[] = new Booking($record);
 				}
+				$this->daysDropdown[] = $record['weekday'];
 			}
 		}
 
@@ -78,9 +68,9 @@ class Timetable extends CI_Model
 				//a timeslot can have more than one booking
 				foreach ($time->booking as $booking)
 				{
-					$time = $booking[0]->timeslot;
-					$record['start'] = $timeslot['start'];
-					$record['end'] = $timeslot['end'];
+					
+					$record['start'] = $time['start'];
+					$record['end'] = $time['end'];
 
 					$day = $booking[0]->day;
 					$record['weekday'] = $day['weekday'];
@@ -100,6 +90,7 @@ class Timetable extends CI_Model
 					//add records into timeslots array
 					$this->timeslots[] = new Booking($record);
 				}
+				$this->timeslotsDropdown[] = $record['start'];
 			}
 		}
 
@@ -141,12 +132,7 @@ class Timetable extends CI_Model
 		 * Debugging Mode
 		 * ******************************************** 
 		 */
-//		echo 'DAYS ARRAY </ br>';
-//		print_r($this->days);
-//		echo 'TIMESLOTS ARRAY </ br>';
-//		print_r($this->timeslots);
-//		echo 'COURSES ARRAY';
-//		print_r($this->timeslotsDropdown);
+//		print_r($this->daysDropdown);
 //		die();
 
 

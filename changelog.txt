@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-22 17:01 - Updated dropdown values and added htaccess
 2016-03-22 14:14 - Created the results page. Added the search methods in timetable.php
 2016-03-22 12:07 - Fixed dropdowns and "Bookings by Timeslots"
 2016-03-22 12:07 - Indexed three facets onto welcome page. Added incomplete search function.

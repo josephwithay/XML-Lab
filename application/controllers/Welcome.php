@@ -54,7 +54,7 @@ class Welcome extends CI_Controller {
 		
 		foreach ($this->timetable->getDaysDropdown() as $weekday => $weekday_name) 
 		{
-			$weekdays[] = array('key' => $weekday, 'value' => $weekday_name);
+			$weekdays[] = array('key' => $weekday_name, 'value' => $weekday_name);
 		}
 		$data['chooseDay'] = $weekdays;
 		
@@ -65,7 +65,7 @@ class Welcome extends CI_Controller {
 		
 		foreach ($this->timetable->getTimeslotsDropdown() as $timeslot => $timeslot_value) 
 		{
-			$timeslots[] = array('key' => $timeslot, 'value' => $timeslot_value);
+			$timeslots[] = array('key' => $timeslot_value, 'value' => $timeslot_value);
 		}
 		$data['chooseTimeslot'] = $timeslots;
 		
@@ -94,7 +94,7 @@ class Welcome extends CI_Controller {
         $bingo = false; // check for bingo condition
 		
 		//get day and timeslot via get_post data
-        $day = $this->input->get_post('chooseDay', TRUE);
+        $day = $this->input->get('chooseDay', TRUE);
         $timeslot = $this->input->get_post('chooseTimeslot', TRUE);
 		
 		// write a string to show what the user searched for and what results 
@@ -122,7 +122,7 @@ class Welcome extends CI_Controller {
         {
             $booking = (array)$booking; 
             $courseFacet = $booking;
-            $booking['facet'] = "By Timeslot"; 
+            $booking['facet'] = "By Course"; 
             $results[] = $booking;
         }
 		
@@ -135,7 +135,7 @@ class Welcome extends CI_Controller {
 			  $bingo = true;
 			}
 		}
-        
+	
         if ($bingo) // show single common result if all 3 match
         {
             $timeslotFacet['facet'] = "Any";
@@ -143,11 +143,11 @@ class Welcome extends CI_Controller {
             $data['bingo'] = "Bingo!";
             
             //set userdata
-            $this->session->set_userdata('currentResult',$time_booking);
+            $this->session->set_userdata('currentResult',$timeslotFacet);
          }
         else 
         {    
-            $data['bingo'] = "";
+            $data['bingo'] = "No bingo!";
             
             //put the results in data
             $data['results'] = $results;
@@ -156,7 +156,7 @@ class Welcome extends CI_Controller {
         }  
         
         //parse the template
-        $this->parser->parse('results', $data);
+        $this->parser->parse('result', $data);
     }
 		
 	}
