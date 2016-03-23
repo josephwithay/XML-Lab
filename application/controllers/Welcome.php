@@ -70,93 +70,91 @@ class Welcome extends CI_Controller {
 		$data['chooseTimeslot'] = $timeslots;
 		
 		/*************************
-		 * Getting user/session data
+		 * Getting session data
 		 *************************/
-        $currentResult = $this->session->userdata('currentResult');
-        
-        if(isset($currentResult))
-        {
-            $data['searchResult'] = $this->parser->parse('booking',$currentResult, TRUE);
-        }
-        else
-        {
-            $data['searchResult'] = 'No data found.';
-        }
+		$currentResult = $this->session->userdata('currentResult');
+
+		if (isset($currentResult)) 
+		{
+			$data['searchResult'] = $this->parser->parse('booking', $currentResult, TRUE);
+		} else 
+		{
+			$data['searchResult'] = 'No data found.';
+		}
 
 		$this->parser->parse('welcome', $data);
 	}
 	
 	public function search() 
 	{	
+		$this->load->model('booking');
 		//instantiate variables to be used
-		$data = array();       
-        $results = array();
-        $bingo = false; // check for bingo condition
+		$data = array();
+		$results = array();
+		$bingo = false; // check for bingo condition
 		
 		//get day and timeslot via get_post data
-        $day = $this->input->get('chooseDay', TRUE);
-        $timeslot = $this->input->get_post('chooseTimeslot', TRUE);
+		$day = $this->input->get_post('chooseDay', TRUE);
+		$timeslot = $this->input->get_post('chooseTimeslot', TRUE);
 		
 		// write a string to show what the user searched for and what results 
 		// are being displayed
-        $data['title'] = "Bookings for " . $day . "@" . $timeslot;
+		$data['title'] = "Bookings for " . $day . "@" . $timeslot;
 		
 		//matching bookings by day results to be added to results array
-		foreach($this->timetable->searchTimetableByDay($day, $timeslot) as $booking)
-        {
-            $booking = (array)$booking; 
-            $dayFacet = $booking; 
-            $booking['facet'] = "By Day"; 
-            $results[] = $booking;
-        }
+		foreach ($this->timetable->searchTimetableByDay($day, $timeslot) as $booking) 
+		{
+			$booking = (array) $booking;
+			$dayFacet = $booking;
+			$booking['facet'] = "By Day";
+			$results[] = $booking;
+		}
 		//matching bookings by timeslot results to be added to results array
-		foreach($this->timetable->searchTimetableByTimeslot($day, $timeslot) as $booking)
-        {
-            $booking = (array)$booking; 
-            $timeslotFacet = $booking;
-            $booking['facet'] = "By Timeslot"; 
-            $results[] = $booking;
-        }
+		foreach ($this->timetable->searchTimetableByTimeslot($day, $timeslot) as $booking) 
+		{
+			$booking = (array) $booking;
+			$timeslotFacet = $booking;
+			$booking['facet'] = "By Timeslot";
+			$results[] = $booking;
+		}
 		//matching bookings by course results to be added to results array
-		foreach($this->timetable->searchTimetableByCourse($day, $timeslot) as $booking)
-        {
-            $booking = (array)$booking; 
-            $courseFacet = $booking;
-            $booking['facet'] = "By Course"; 
-            $results[] = $booking;
-        }
-		
-		//BINGO CHECKERRRR
+		foreach ($this->timetable->searchTimetableByCourse($day, $timeslot) as $booking) 
+		{
+			$booking = (array) $booking;
+			$courseFacet = $booking;
+			$booking['facet'] = "By Course";
+			$results[] = $booking;
+		}
 
+		/*************************
+		 * Checking for Bingo
+		 *************************/
 		if (isset($dayFacet) && isset($timeslotFacet) && isset($courseFacet))
 		{
-		 if ($dayFacet == $timeslotFacet && $dayFacet == $courseFacet )
+			 if ($dayFacet == $timeslotFacet && $dayFacet == $courseFacet )
 			{
 			  $bingo = true;
 			}
 		}
-	
-        if ($bingo) // show single common result if all 3 match
-        {
-            $timeslotFacet['facet'] = "Any";
-            $data['results'] = array($timeslotFacet);
-            $data['bingo'] = "Bingo!";
-            
-            //set userdata
-            $this->session->set_userdata('currentResult',$timeslotFacet);
-         }
-        else 
-        {    
-            $data['bingo'] = "No bingo!";
-            
-            //put the results in data
-            $data['results'] = $results;
-            //set userdata
-            $this->session->set_userdata('currentResult',NULL);            
-        }  
-        
-        //parse the template
-        $this->parser->parse('result', $data);
-    }
-		
+		// show single common result if all 3 match
+		if ($bingo)
+		{
+			$timeslotFacet['facet'] = "Any";
+			$data['results'] = array($timeslotFacet);
+			$data['bingo'] = "Bingo!";
+
+			//set userdata
+			$this->session->set_userdata('currentResult', $timeslotFacet);
+		} else 
+		{
+			$data['bingo'] = "No bingo!";
+			//put the results in data
+			$data['results'] = $results;
+			//set userdata
+			$this->session->set_userdata('currentResult', NULL);
+		}
+		//parse the template
+		$this->parser->parse('result', $data);
 	}
+
+}
