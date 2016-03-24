@@ -17,21 +17,21 @@ Format of days.xml
 <days>
 	<day weekday="MON">
 		<booking>
-			<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
+			<timeslot start="1030" end="1220">1030 to 1220</timeslot>
 			<courseCode>4650</courseCode>
 			<courseType>Lab</courseType>
 			<room>SE12-306</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1530" end="1620">15:30 to 16:20</timeslot>
+			<timeslot start="1530" end="1620">1530 to 1620</timeslot>
 			<courseCode>4910</courseCode>
 			<courseType>Lec</courseType>
 			<room>SW1-2005</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1630" end="1720">16:30 to 17:20</timeslot>
+			<timeslot start="1630" end="1720">1630 to 1720</timeslot>
 			<courseCode>4650</courseCode>
 			<courseType>Lec</courseType>
 			<room>SE6-205</room>
@@ -40,21 +40,21 @@ Format of days.xml
 	</day>
 	<day weekday="TUE">
 		<booking>
-			<timeslot start="0830" end="1020">08:30 to 10:20</timeslot>
+			<timeslot start="0830" end="1020">0830 to 1020</timeslot>
 			<courseCode>4620</courseCode>
 			<courseType>Lab</courseType>
 			<room>SE12-306</room>
 			<instructor>Bethany Edmunds</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1230" end="1320">12:30 to 13:20</timeslot>
+			<timeslot start="1230" end="1320">1230 to 1320</timeslot>
 			<courseCode>4650</courseCode>
 			<courseType>Lec</courseType>
 			<room>SE6-205</room>
 			<instructor>Medhat Elmasry</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1530" end="1720">15:30 to 17:20</timeslot>
+			<timeslot start="1530" end="1720">1530 to 1720</timeslot>
 			<courseCode>4620</courseCode>
 			<courseType>Lec</courseType>
 			<room>SW1-2020</room>
@@ -63,7 +63,7 @@ Format of days.xml
 	</day>
 	<day weekday="WED">
 		<booking>
-			<timeslot start="1230" end="1420">12:30 to 14:20</timeslot>
+			<timeslot start="1230" end="1420">1230 to 1420</timeslot>
 			<courseCode>4850</courseCode>
 			<courseType>Lec</courseType>
 			<room>SE6-207</room>
@@ -72,21 +72,21 @@ Format of days.xml
 	</day>
 	<day weekday="THU">
 		<booking>
-			<timeslot start="0930" end="1020">09:30 to 10:20</timeslot>
+			<timeslot start="0930" end="1020">0930 to 1020</timeslot>
 			<courseCode>4910</courseCode>
 			<courseType>Lec</courseType>
 			<room>SW1-1205</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
+			<timeslot start="1030" end="1220">1030 to 1220</timeslot>
 			<courseCode>4910</courseCode>
 			<courseType>Lab</courseType>
 			<room>SE12-306</room>
 			<instructor>Richard Chau</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1330" end="1520">13:30 to 15:20</timeslot>
+			<timeslot start="1330" end="1520">1330 to 1520</timeslot>
 			<courseCode>4850</courseCode>
 			<courseType>Lab</courseType>
 			<room>SE12-308</room>
@@ -95,21 +95,21 @@ Format of days.xml
 	</day>
 	<day weekday="FRI">
 		<booking>
-			<timeslot start="0830" end="1020">08:30 to 10:20</timeslot>
+			<timeslot start="0830" end="1020">0830 to 1020</timeslot>
 			<courseCode>4660</courseCode>
 			<courseType>Lec</courseType>
 			<room>SW9-206</room>
 			<instructor>Steve Fabiszewski</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
+			<timeslot start="1030" end="1220">1030 to 1220</timeslot>
 			<courseCode>4770</courseCode>
 			<courseType>Lab</courseType>
 			<room>SE12-306</room>
 			<instructor>Trevor Lord</instructor>
 		</booking>
 		<booking>
-			<timeslot start="1330" end="1530">13:30 to 15:30</timeslot>
+			<timeslot start="1330" end="1530">1330 to 1530</timeslot>
 			<courseCode>4660</courseCode>
 			<courseType>Lab</courseType>
 			<room>SE12-306</room>

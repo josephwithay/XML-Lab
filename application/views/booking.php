@@ -5,7 +5,7 @@
 	</tr>
 	<tr>
 		<td><b>Day: </b></td>
-		<td>{weekday} - {timeslot} </td>
+		<td>{weekday} - {start} - {end}</td>
 	</tr>
 	<tr>
 		<td><b>Instructor: </b></td>

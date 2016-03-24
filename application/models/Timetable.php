@@ -63,14 +63,14 @@ class Timetable extends CI_Model
 		foreach ($this->xml->timeslots as $timeslots)
 		{
 			//there is more than one timeslot
-			foreach ($timeslots->timeslot as $time)
+			foreach ($timeslots->timeslot as $timeslot)
 			{
 				//a timeslot can have more than one booking
-				foreach ($time->booking as $booking)
+				foreach ($timeslot->booking as $booking)
 				{
 					$record['timeslot'] = $timeslot;
-					$record['start'] = $time['start'];
-					$record['end'] = $time['end'];
+					$record['start'] = $timeslot['start'];
+					$record['end'] = $timeslot['end'];
 
 					$day = $booking[0]->day;
 					$record['weekday'] = $day['weekday'];
@@ -122,6 +122,7 @@ class Timetable extends CI_Model
 					$instructor = $booking[0]->instructor;
 					$record['instructor'] = $instructor;
 
+					
 					//add records into courses array
 					$this->courses[] = new Booking($record);
 				}
@@ -219,7 +220,6 @@ Class Booking extends CI_Model
 	public $weekday = "";
 	public $start = "";
 	public $end = "";
-	public $timeslot = "";
 	public $courseType = "";
 	public $courseCode = "";
 	public $room = "";
@@ -231,7 +231,6 @@ Class Booking extends CI_Model
 		$this->weekday = (String) $detail['weekday'];
 		$this->start = (String) $detail['start'];
 		$this->end = (String) $detail['end'];
-		$this->timeslot = (String) $detail['timeslot'];
 		$this->courseType = (String) $detail['courseType'];
 		$this->courseCode = (String) $detail['courseCode'];
 		$this->room = (String) $detail['room'];
